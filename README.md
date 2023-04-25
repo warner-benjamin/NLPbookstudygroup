@@ -9,9 +9,9 @@ book's notebooks. Or run `setup-lite.sh` from bash. You may need to change
 
 ```bash
 conda create -n nlpbook python=3.10 "pytorch>=2.0.0" torchvision torchaudio torchtext \
-pytorch-cuda=11.8 "transformers>=4.28.1" "datasets>=2.11.0" sentencepiece optuna \
-scikit-learn onnxruntime matplotlib ipywidgets jupyterlab umap-learn seqeval nltk \
-sacrebleu py7zr nlpaug scikit-multilearn psutil accelerate \
+pytorch-cuda=11.8 "transformers>=4.28.1" "datasets>=2.11.0" "tokenizers>=0.13.3" \
+sentencepiece optuna scikit-learn onnxruntime matplotlib ipywidgets jupyterlab \
+umap-learn seqeval nltk sacrebleu py7zr nlpaug scikit-multilearn psutil accelerate \
 -c pytorch -c nvidia/label/cuda-11.8.0 -c huggingface -c conda-forge
 
 conda activate nlpbook
@@ -25,10 +25,11 @@ These commands will additionally install Cuda, fastai, blurr, fastxtend, Compose
 
 ```bash
 conda create -n nlpbook python=3.10 "pytorch>=2.0.0" torchvision torchaudio torchtext \
-pytorch-cuda=11.8 cuda "transformers>=4.28.1" "datasets>=2.11.0" fastai sentencepiece \
-optuna scikit-learn onnxruntime matplotlib ipywidgets jupyterlab umap-learn seqeval \
-nltk sacrebleu py7zr nlpaug scikit-multilearn psutil accelerate wandb openpyxl xlrd \
-torchmetrics requests coolname tabulate py-cpuinfo importlib-metadata \
+pytorch-cuda=11.8 cuda "transformers>=4.28.1" "datasets>=2.11.0" "tokenizers>=0.13.3" \
+fastai sentencepiece optuna scikit-learn onnxruntime matplotlib ipywidgets jupyterlab \
+umap-learn seqeval nltk sacrebleu py7zr nlpaug scikit-multilearn psutil accelerate \
+wandb openpyxl xlrd torchmetrics requests coolname tabulate py-cpuinfo \
+importlib-metadata \
 -c pytorch -c nvidia/label/cuda-11.8.0 -c huggingface -c fastai -c conda-forge
 
 conda activate nlpbook
