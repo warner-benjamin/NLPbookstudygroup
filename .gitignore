@@ -161,3 +161,5 @@ cython_debug/
 
 # wandb logs
 wandb/
+data/
+models/
