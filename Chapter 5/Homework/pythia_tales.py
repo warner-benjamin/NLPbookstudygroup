@@ -248,8 +248,6 @@ def train(ctx:typer.Context, # Typer Context to grab config for passing to WandB
                      'group', 'tags', 'entity', 'save_code']
     config = {k:v for k,v in ctx.params.items() if k not in ignore_params}
 
-    print(config)
-
     if log_wandb:
         logger = WandBLogger(project, f'{model}_sweep' if group is None else group,
                              name, entity, tags.split(','), init_kwargs={'config':config})
