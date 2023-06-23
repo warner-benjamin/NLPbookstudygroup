@@ -8,9 +8,9 @@ book's notebooks. Or run `setup-lite.sh` from bash. You may need to change
 `source activate nlpbook` if conda isn't setup for bash.
 
 ```bash
-conda create -n nlpbook python=3.10 "pytorch>=2.0.0" torchvision torchaudio torchtext \
+conda create -n nlpbook python=3.10 "pytorch>=2.0.1" torchvision torchaudio torchtext \
 pytorch-cuda=11.8 "transformers>=4.28.1" "datasets>=2.11.0" "tokenizers>=0.13.3" \
-sentencepiece optuna scikit-learn onnxruntime matplotlib ipywidgets jupyterlab \
+sentencepiece optuna scikit-learn onnxruntime matplotlib ipywidgets jupyterlab timm \
 umap-learn seqeval nltk sacrebleu py7zr nlpaug scikit-multilearn psutil accelerate \
 -c pytorch -c nvidia/label/cuda-11.8.0 -c huggingface -c conda-forge
 
@@ -24,18 +24,18 @@ These commands will additionally install Cuda, fastai, blurr, fastxtend, Compose
 `source activate nlpbook` if conda isn't setup for bash.
 
 ```bash
-conda create -n nlpbook python=3.10 "pytorch>=2.0.0" torchvision torchaudio torchtext \
+conda create -n nlpbook python=3.10 "pytorch>=2.0.1" torchvision torchaudio torchtext \
 pytorch-cuda=11.8 cuda "transformers>=4.28.1" "datasets>=2.11.0" "tokenizers>=0.13.3" \
 fastai sentencepiece optuna scikit-learn onnxruntime matplotlib ipywidgets jupyterlab \
 umap-learn seqeval nltk sacrebleu py7zr nlpaug scikit-multilearn psutil accelerate \
-wandb openpyxl xlrd torchmetrics requests coolname tabulate py-cpuinfo \
+wandb openpyxl xlrd torchmetrics requests coolname tabulate py-cpuinfo timm \
 importlib-metadata \
 -c pytorch -c nvidia/label/cuda-11.8.0 -c huggingface -c fastai -c conda-forge
 
 conda activate nlpbook
 
-pip install rouge-score bertviz fastxtend torch_optimizer
-pip install ohmeow-blurr mosaicml --no-deps
+pip install rouge-score bertviz fastxtend torch_optimizer composer
+pip install ohmeow-blurr --no-deps
 ```
 
 `--no-deps` is so blurr and Composer won't uninstall PyTorch 2.0 for 1.13.
